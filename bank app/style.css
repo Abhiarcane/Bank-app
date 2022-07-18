@@ -1,0 +1,268 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #444;
+  background-color: #ffff;
+  height: 100vh;
+  padding: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.welcome {
+  font-size: 2rem;
+  font-weight: 520;
+  
+}
+
+.logo {
+  height: 10rem;
+}
+
+.login {
+  display: flex;
+}
+
+.login__input {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  text-align: center;
+  width: 12rem;
+  border-radius: 10rem;
+  margin-right: 1rem;
+  color: inherit;
+  border: 1px solid #b1b1b1;
+  transition: all 0.3s;
+  background-color: rgb(249, 249, 249);
+}
+
+.login__input:focus {
+  outline: none;
+  border: 1px solid rgb(213, 213, 213);
+}
+
+.login__input::placeholder {
+  color: #bbb;
+}
+.login__input:hover{
+  background-color: #ffffff;
+}
+
+.login__btn {
+  border: none;
+  background: none;
+  font-size: 2.2rem;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+  
+}
+
+.login__btn:hover,
+.login__btn:focus,
+.btn--sort:hover,
+.btn--sort:focus {
+  outline: none;
+  color: rgba(97, 97, 97, 0.731);
+ 
+}
+
+
+
+
+
+
+.app{
+  
+  max-width: 100rem;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+  gap: 4rem;
+  opacity: 0;
+
+  
+ 
+}
+
+.balance{
+  grid-column: 1 / span 2;
+  display: flex;
+  font-size: 2rem;
+  
+  justify-content: space-between;
+}
+.balance__date{
+  color: #bbb;
+  font-size: 1.7rem;
+}
+.balance__label{
+  font-weight: 600;
+
+}
+.balance__value{
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+.movements{
+  grid-row: 2/span 3;
+  overflow: scroll;
+  background-color: #f8f8f8;
+  border-top-left-radius: 1rem;
+  
+}
+.movements__row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border: 1px solid #f3f3f3;
+  color: #000;
+  
+}
+.movements__type{
+  background-color: yellowgreen;
+  border-radius: 1rem;
+  padding: 0.4rem 1.2rem;
+  align-items: center;
+  display: inline;
+  font-size: 1rem;
+  font-weight: 500;
+  color:#fff ;
+}
+.movements__date{
+  font-size: 1.4rem;
+}
+.movements__type--withdrawal{
+  background-color: rgb(240, 44, 44);
+}
+.movements__value{
+  color: #000;
+  font-size: 2rem;
+}
+.summary{
+  grid-row: 5/6;
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  align-items: baseline;
+  margin-bottom: 4rem;
+}
+.summary__label{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.summary__value{
+  margin-right: 1.5rem;
+}
+.summary__value--in{
+  color: coral;
+}
+.summary__value--out{
+  color: rgb(240, 44, 44);
+}
+.summary__value--interest{
+  color: yellowgreen;
+}
+.btn--sort{
+  background-color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.operation{
+  padding: 3rem 4rem;
+  border-radius: 1rem;
+
+}
+
+.operation--transfer{
+ background-color: rgb(255, 161, 47);
+}
+.operation--loan{
+background-color: yellowgreen;
+}
+.operation--close{
+  background-color: rgb(255, 53, 53);
+}
+
+.form{
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.4rem 1rem;
+  
+  
+}
+.form__input{
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  padding: 0.3rem 1rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s;
+}
+.form--loan{
+  grid-template-columns: 2.5fr 1fr 2.5fr;
+}
+.form__label--loan{
+  grid-row: 2;
+}
+.form__label {
+  font-size: 1.3rem;
+  text-align: center;
+}
+.form__btn{
+  background-color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+h2{
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  
+}
+.logout-timer{
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-self: end;
+}
+.timer{
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+
